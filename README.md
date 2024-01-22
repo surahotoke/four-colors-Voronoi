@@ -4,7 +4,7 @@
 2. vor = Voronoi(start_points)  
    ボロノイ図のそれぞれの輪郭の点の座標と線の繋がりを生成します。
 3. polygons = get_effective_polygons(vor.regions)  
-   閉じられた輪郭の図形を抽出します。
+   輪郭の図形の内、閉じられたものを抽出します。
 4. touching_polygons = get_touching_polygons(polygons)  
    隣接する閉じられた図形の番号を取得します。
 5. colors = set_colors(polygons, touching_polygons)  
