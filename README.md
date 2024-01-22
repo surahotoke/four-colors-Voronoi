@@ -1,10 +1,16 @@
 # 動作説明
-1. start_points = np.random.rand(n, 2)の部分でボロノイ図を作るための点をランダムに設定します。
-2. vor = Voronoi(start_points)の部分でボロノイ図のそれぞれの輪郭の点の座標と線の繋がりを生成します。
-3. polygons = get_effective_polygons(vor.regions)の部分で閉じられた輪郭の図形を抽出します。
-4. touching_polygons = get_touching_polygons(polygons)の部分で隣接する閉じられた図形の番号を取得します。
-5. colors = set_colors(polygons, touching_polygons)の部分で全てが隣り合わない色の組み合わせを計算します。
-6. paint_colors(polygons, colors)で色を塗ります。
+1. start_points = np.random.rand(n, 2)  
+   ボロノイ図を作るための点をランダムに設定します。
+2. vor = Voronoi(start_points)  
+   ボロノイ図のそれぞれの輪郭の点の座標と線の繋がりを生成します。
+3. polygons = get_effective_polygons(vor.regions)  
+   閉じられた輪郭の図形を抽出します。
+4. touching_polygons = get_touching_polygons(polygons)  
+   隣接する閉じられた図形の番号を取得します。
+5. colors = set_colors(polygons, touching_polygons)  
+   全てが隣り合わない色の組み合わせを計算します。
+6. paint_colors(polygons, colors)  
+    色を塗ります。
 
 # アルゴリズム
 colors:polygonsに対応する同じ場所の色  
